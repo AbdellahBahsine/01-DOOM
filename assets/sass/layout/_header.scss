@@ -1,0 +1,53 @@
+header{
+    height: 80px;
+    color: $color-dark;
+
+    .header__inner{
+        height: 100%;
+        padding: 0 0 0 2.5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav{
+            margin-left: auto;
+
+            .nav__link{
+                margin: 0 28px;
+                font-weight: 500;
+                color: $color-dark;
+            }
+        }
+
+        .phone{
+            display: flex;
+            height: 100%;
+            margin-left: 28px;
+
+            .phone__icon{
+                padding: 0 28px;
+                background-color: $color-primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color-white;
+
+                .fa-phone-volume{
+                    transform: rotate(-45deg);
+                    font-size: 22px;
+                }
+            }
+
+            .phone__number{
+                background-color: $color-gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 28px;
+                font-weight: 700;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
