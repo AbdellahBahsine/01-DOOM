@@ -11,11 +11,38 @@ header{
 
         nav{
             margin-left: auto;
+            height: 80px;
+            display: flex;
 
             .nav__link{
+                position: relative;
                 margin: 0 28px;
+                height: 100%;
                 font-weight: 500;
+                line-height: 80px;
                 color: $color-dark;
+
+                &::before, &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 0%;
+                    border: 1px solid transparent;
+                    transition: width 0.2s;
+                }
+
+                &::before{
+                    left: 0;
+                }
+
+                &::after{
+                    right: 0;
+                }
+
+                &:hover::before, &:hover::after{
+                    width: 50%;
+                    border: 1px solid $color-primary;
+                }
             }
         }
 

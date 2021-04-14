@@ -1,0 +1,166 @@
+main{
+    position: relative;
+
+    .message{
+        position: fixed;
+        top: 314px;
+        right: -115px;
+        z-index: 40;
+        width: 273px;
+        height: 64px;
+        background-color: $color-dark;
+        color: $color-white;
+        transform: rotate(-90deg);
+        display: flex;
+        transition: 0.6s;
+
+        &:hover{
+            right: -110px;
+        }
+
+        .message__text{
+            width: 80%;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .message__icon{
+            width: 20%;
+            background-color: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover .fa-envelope{
+                transform: scale(1.2);
+            }
+
+            .fa-envelope{
+                font-size: 20px;
+                transition: 0.6s;
+                color: $color-white;
+            }
+        }
+    }
+
+    .hero{
+        height: 1100px;
+        background-color: $color-primary;
+        color: $color-white;
+
+        button:focus { 
+            outline: 0
+        }
+
+        .owl-prev{
+            position: absolute;
+            left: 2.5%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #505ff4 !important;
+            padding: 10px !important;
+
+            &.disabled{
+                background-color: $color-dark !important;
+                opacity: 33%;
+            }
+        }
+
+        .owl-next{
+            position: absolute;
+            right: 2.5%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #505ff4 !important;
+            padding: 10px !important;
+
+            &.disabled{
+                background-color: $color-dark !important;
+                opacity: 33%;
+            }
+        }
+
+        .owl-dots{
+            position: absolute;
+            left: 388px;
+            bottom: 27px;
+
+            .owl-dot{
+
+                &.active span{
+                    background-color: $color-white;
+                }
+
+                &:hover span{
+                    background-color: $color-white;
+                }
+                
+                span{
+                    border: 2px solid $color-white;
+                    background: none;
+                }
+            }
+        }
+
+        .owl-stage-outer{
+            height: 100%;
+            width: 100%;
+            .owl-stage{
+                height: 100%;
+                width: 100%;
+
+                .owl-item{
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("../images/home.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgb(51, 51, 51, 0.5);
+                    }
+        
+                    .hero__inner{
+                        position: absolute;
+                        z-index: 3;
+                        width: 95%;
+                        height: 100%;
+                        margin:  0 auto;
+                        display: flex;
+                        flex-direction: column;      
+                        text-align: center;
+            
+                        .hero__title{
+                            font-size: 100px;
+                            font-weight: 200;
+                            margin-bottom: 70px;
+                            margin-top: 360px;
+            
+                            span{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .count{
+        position: absolute;
+        bottom: 27px;
+        right: 388px;
+        z-index: 55;
+        color: $color-white;
+    }
+}

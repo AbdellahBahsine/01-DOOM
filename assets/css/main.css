@@ -14,6 +14,24 @@ body {
   line-height: 1.5;
 }
 
+.button {
+  width: 258px;
+  height: 74px;
+  background-image: -moz-linear-gradient(31deg, #79ccff 1%, #6270ff 100%);
+  background-image: -webkit-linear-gradient(31deg, #79ccff 1%, #6270ff 100%);
+  background-image: -ms-linear-gradient(31deg, #79ccff 1%, #6270ff 100%);
+  box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.35);
+  border: none;
+  outline: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+}
+.button .fa-location-arrow {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
 header {
   height: 80px;
   color: #2e2e2e;
@@ -27,11 +45,34 @@ header .header__inner {
 }
 header .header__inner nav {
   margin-left: auto;
+  height: 80px;
+  display: flex;
 }
 header .header__inner nav .nav__link {
+  position: relative;
   margin: 0 28px;
+  height: 100%;
   font-weight: 500;
+  line-height: 80px;
   color: #2e2e2e;
+}
+header .header__inner nav .nav__link::before, header .header__inner nav .nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  border: 1px solid transparent;
+  transition: width 0.2s;
+}
+header .header__inner nav .nav__link::before {
+  left: 0;
+}
+header .header__inner nav .nav__link::after {
+  right: 0;
+}
+header .header__inner nav .nav__link:hover::before, header .header__inner nav .nav__link:hover::after {
+  width: 50%;
+  border: 1px solid #6270ff;
 }
 header .header__inner .phone {
   display: flex;
@@ -59,6 +100,147 @@ header .header__inner .phone .phone__number {
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+main {
+  position: relative;
+}
+main .message {
+  position: fixed;
+  top: 314px;
+  right: -115px;
+  z-index: 40;
+  width: 273px;
+  height: 64px;
+  background-color: #2e2e2e;
+  color: #fff;
+  transform: rotate(-90deg);
+  display: flex;
+  transition: 0.6s;
+}
+main .message:hover {
+  right: -110px;
+}
+main .message .message__text {
+  width: 80%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .message .message__icon {
+  width: 20%;
+  background-color: #6270ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main .message .message__icon:hover .fa-envelope {
+  transform: scale(1.2);
+}
+main .message .message__icon .fa-envelope {
+  font-size: 20px;
+  transition: 0.6s;
+  color: #fff;
+}
+main .hero {
+  height: 1100px;
+  background-color: #6270ff;
+  color: #fff;
+}
+main .hero button:focus {
+  outline: 0;
+}
+main .hero .owl-prev {
+  position: absolute;
+  left: 2.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #505ff4 !important;
+  padding: 10px !important;
+}
+main .hero .owl-prev.disabled {
+  background-color: #2e2e2e !important;
+  opacity: 33%;
+}
+main .hero .owl-next {
+  position: absolute;
+  right: 2.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #505ff4 !important;
+  padding: 10px !important;
+}
+main .hero .owl-next.disabled {
+  background-color: #2e2e2e !important;
+  opacity: 33%;
+}
+main .hero .owl-dots {
+  position: absolute;
+  left: 388px;
+  bottom: 27px;
+}
+main .hero .owl-dots .owl-dot.active span {
+  background-color: #fff;
+}
+main .hero .owl-dots .owl-dot:hover span {
+  background-color: #fff;
+}
+main .hero .owl-dots .owl-dot span {
+  border: 2px solid #fff;
+  background: none;
+}
+main .hero .owl-stage-outer {
+  height: 100%;
+  width: 100%;
+}
+main .hero .owl-stage-outer .owl-stage {
+  height: 100%;
+  width: 100%;
+}
+main .hero .owl-stage-outer .owl-stage .owl-item {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+main .hero .owl-stage-outer .owl-stage .owl-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner {
+  position: absolute;
+  z-index: 3;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
+  font-size: 100px;
+  font-weight: 200;
+  margin-bottom: 70px;
+  margin-top: 360px;
+}
+main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title span {
+  font-weight: 700;
+}
+main .count {
+  position: absolute;
+  bottom: 27px;
+  right: 388px;
+  z-index: 55;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

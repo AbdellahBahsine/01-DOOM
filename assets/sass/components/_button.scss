@@ -1,0 +1,18 @@
+.button{
+    width: 258px;
+    height: 74px;
+    background-image: -moz-linear-gradient( 31deg, rgb(121,204,255) 1%, rgb(98,112,255) 100%);
+    background-image: -webkit-linear-gradient( 31deg, rgb(121,204,255) 1%, rgb(98,112,255) 100%);
+    background-image: -ms-linear-gradient( 31deg, rgb(121,204,255) 1%, rgb(98,112,255) 100%);
+    box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.35);
+    border: none;
+    outline: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $color-white;
+
+    .fa-location-arrow{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+}
