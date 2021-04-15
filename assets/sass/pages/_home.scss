@@ -85,7 +85,7 @@ main{
 
         .owl-dots{
             position: absolute;
-            left: 388px;
+            left: 15%;
             bottom: 27px;
 
             .owl-dot{
@@ -131,13 +131,14 @@ main{
                     }
         
                     .hero__inner{
-                        position: absolute;
+                        position: relative;
                         z-index: 3;
                         width: 95%;
                         height: 100%;
-                        margin:  0 auto;
+                        margin: 0 auto;
                         display: flex;
-                        flex-direction: column;      
+                        flex-direction: column;   
+                        align-items: center;   
                         text-align: center;
             
                         .hero__title{
@@ -159,8 +160,39 @@ main{
     .count{
         position: absolute;
         bottom: 27px;
-        right: 388px;
-        z-index: 55;
+        right: 15%;
+        z-index: 100;
         color: $color-white;
+    }
+
+    .features{
+        padding: 100px 0;
+
+        .features__inner{
+            width: 70%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px; 
+
+            .feature{
+                margin-bottom: 25px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                .feature__title{
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: $color-dark;
+                    margin: 25px 0 30px 0;
+                }
+
+                .feature__text{
+                    color: #838383;
+                }
+            }
+        }
     }
 }
