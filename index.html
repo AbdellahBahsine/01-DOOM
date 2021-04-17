@@ -106,17 +106,33 @@
             <div class="about__inner">
                 <div class="about__content">
                     <small class="about__tag">Features</small>
-                    <h2 class="about__title">A user friendly Theme,<br />build with usability in mind</h2>
+                    <h2 class="about__title">A user friendly <span>Theme</span>,<br />build with usability in mind</h2>
                     <p class="about__text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis effic iturut magna. Pellente sque sita met tellus blandit. Etiam nec odio.</p>
+                    <a href="#"><button class="button">Discover Doom <i class="fas fa-location-arrow"></i></button></a>
                 </div>
                 <div class="about__video">
-                    <video width="320" height="240" controls>
-                        <source src="./assets/videos/dummy.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
+                    <div class="player">
+                        <button id="play">
+                            <div class="playback-icons">
+                                <i class="fas fa-play"></i>
+                                <i class="fas fa-pause hidden"></i>
+                            </div>
+                        </button>
+
+                        <video id="video" controls>
+                            <source src="./assets/videos/dummy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <div class="video-controls hidden" id="video-controls">
+                            <div class="video-progress">
+                                <progress id="progress-bar" value="0" min="0"></progress>
+                                <input class="seek" id="seek" value="0" min="0" type="range" step="1">
+                                <div class="seek-tooltip" id="seek-tooltip">00:00</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </section>
     </main>
 

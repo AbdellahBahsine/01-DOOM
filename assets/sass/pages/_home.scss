@@ -195,4 +195,227 @@ main{
             }
         }
     }
+
+    .about{
+        padding: 100px 0;
+        background-color: #f1f6f9;
+
+        .about__inner{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .about__content{
+                flex: 1;
+
+                .about__tag{
+                    text-transform: uppercase;
+                    color: #838383;
+                }
+
+                .about__title{
+                    font-size: 34px;
+                    font-weight: 700;
+                    color: $color-dark;
+                    margin-bottom: 40px;
+
+                    span{
+                        text-decoration: underline;
+                        text-decoration-color: $color-primary;
+                    }
+                }
+
+                .about__text{
+                    color: #838383;
+                    margin-bottom: 75px;
+                }
+            }
+
+            .about__video{
+                flex: 1;
+
+                .player{
+                    position: relative;
+
+                    button{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        padding: 10px 15px;
+                        background-color: #333;
+                        border: 0;
+                        outline: 0;
+                        z-index: 4;
+                        cursor: pointer; 
+
+                        .playback-icons{
+                            color: #fff;
+    
+                            .hidden{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    video{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .video-controls{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        padding: 10px;
+                        transition: 0.2s;
+                        background-color: #333;
+
+                        &.hide{
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+
+                        .video-progress{
+                            position: relative;
+                            height: 8.4px;
+                            margin-bottom: 10px;
+
+                            progress{
+                                position: absolute;
+                                top: 0;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                width: 100%;
+                                height: 8.4px;
+                                pointer-events: none;
+
+                                &::-webkit-progress-bar{
+                                    background-color: #555;
+                                }
+
+                                &::-webkit-progress-value{
+                                    background-color: yellow;
+                                }
+                                  
+                                &::-moz-progress-bar{
+                                    border: 1px solid yellow;
+                                    background-color: yellow;
+                                }
+                            }
+
+                            .seek{
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                margin: 0;
+                                cursor: pointer;
+                            }
+
+                            input[type=range]{
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                background: transparent;
+                                height: 8.4px;
+                                cursor: pointer;
+                            }
+
+                            input[type=range]:focus{
+                                outline: none;
+                            }
+
+                            input[type=range]::-webkit-slider-runnable-track{
+                                -webkit-appearance: none;
+                                width: 100%;
+                                border-radius: 1.3px;
+                                cursor: pointer;
+                                transition: 0.4s;
+                            }
+
+                            input[type=range]::-webkit-slider-thumb{
+                                -webkit-appearance: none;
+                                height: 16px;
+                                width: 16px;
+                                background: yellow;
+                                border-radius: 16px;
+                                cursor: pointer;
+                                margin-left: -1px;
+                            }
+
+                            input[type=range]:focus::-webkit-slider-runnable-track{
+                                background: transparent;
+                            }
+                              
+                            input[type=range].volume{
+                                background: #fff;
+                                height: 5px;
+                            }
+
+                            input[type=range].volume::-webkit-slider-runnable-track{
+                                background: transparent;
+                            }
+                              
+                            input[type=range].volume::-webkit-slider-thumb{
+                                background-color: #fff;
+                                height: 14px;
+                                width: 14px;
+                                margin-left: 0;
+                            }
+  
+                            input[type=range]::-moz-range-track{
+                                background: transparent;
+                                width: 100%;
+                                height: 8.4px;
+                                border: 1px solid transparent;
+                                border-radius: 1.3px;
+                                cursor: pointer;
+                            }
+
+                            input[type=range]::-moz-range-thumb{
+                                height: 14px;
+                                width: 14px;
+                                border-radius: 50px;
+                                background: yellow;
+                                border: 1px solid yellow;
+                                margin-top: 5px;
+                                cursor: pointer;
+                            }
+
+                            input[type=range]:focus::-moz-range-track{
+                                outline: none;
+                            }
+                              
+                            input[type=range].volume::-moz-range-thumb{
+                                background-color: #fff;
+                                border: 1px solid #fff;
+                            }
+
+                            .seek:hover+.seek-tooltip{
+                                display: block;
+                            }
+
+                            .seek-tooltip{
+                                position: absolute;
+                                top: -50px;
+                                font-size: 12px;
+                                font-weight: 700;
+                                background-color: rgba(0, 0, 0, 0.6);
+                                color: #fff;
+                                margin-left: -20px;
+                                padding: 3px;
+                                display: none;
+                            }
+
+                        }
+                    }
+                      
+                }
+            }
+        }
+    }
 }
