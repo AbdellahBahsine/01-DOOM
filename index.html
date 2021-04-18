@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,300&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+
 </head>
 <body>
     <header>
@@ -111,31 +113,30 @@
                     <a href="#"><button class="button">Discover Doom <i class="fas fa-location-arrow"></i></button></a>
                 </div>
                 <div class="about__video">
-                    <div class="player">
-                        <button id="play">
-                            <div class="playback-icons">
-                                <i class="fas fa-play"></i>
-                                <i class="fas fa-pause hidden"></i>
-                            </div>
-                        </button>
-
-                        <video id="video" controls>
-                            <source src="./assets/videos/dummy.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-
-                        <div class="video-controls hidden" id="video-controls">
-                            <div class="video-progress">
-                                <progress id="progress-bar" value="0" min="0"></progress>
-                                <input class="seek" id="seek" value="0" min="0" type="range" step="1">
-                                <div class="seek-tooltip" id="seek-tooltip">00:00</div>
-                            </div>
-                        </div>
-                    </div>
+                    <video
+                        id="my-video"
+                        class="video-js"
+                        controls
+                        preload="auto"
+                        width="640"
+                        height="264"
+                        poster="./assets/images/home.jpg"
+                        data-setup="{}"
+                    >
+                        <source src="./assets/videos/dummy.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                            >supports HTML5 video</a
+                        >
+                        </p>
+                    </video>
                 </div>
         </section>
     </main>
 
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/owl-carousel/owl.carousel.min.js"></script>
     <script src="https://kit.fontawesome.com/d5a84b61e8.js" crossorigin="anonymous"></script>
