@@ -291,7 +291,6 @@ main .about .about__inner .about__content .about__title {
   font-size: 34px;
   font-weight: 700;
   color: #2e2e2e;
-  margin-bottom: 40px;
 }
 main .about .about__inner .about__content .about__title span {
   text-decoration: underline;
@@ -299,10 +298,32 @@ main .about .about__inner .about__content .about__title span {
 }
 main .about .about__inner .about__content .about__text {
   color: #838383;
-  margin-bottom: 75px;
+  margin: 40px 0;
 }
 main .about .about__inner .about__video {
   flex: 1;
+}
+main .about .about__inner .about__video .video-js {
+  width: 100%;
+}
+main .about .about__inner .about__video .vjs-poster {
+  background-size: cover;
+}
+main .about .about__inner .about__video .vjs-big-play-button {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .about .about__inner .about__video .vjs-big-play-button .vjs-icon-placeholder::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

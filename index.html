@@ -118,10 +118,14 @@
                         class="video-js"
                         controls
                         preload="auto"
-                        width="640"
-                        height="264"
-                        poster="./assets/images/home.jpg"
-                        data-setup="{}"
+                        poster="./assets/images/video-poster.jpg"
+                        disablePictureInPicture
+                        data-setup='{
+                            "loadingSpinner": true,
+                            "controlBar": {
+                                "pictureInPictureToggle": false
+                            }
+                        }'
                     >
                         <source src="./assets/videos/dummy.mp4" type="video/mp4" />
                         <p class="vjs-no-js">

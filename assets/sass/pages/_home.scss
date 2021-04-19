@@ -219,7 +219,6 @@ main{
                     font-size: 34px;
                     font-weight: 700;
                     color: $color-dark;
-                    margin-bottom: 40px;
 
                     span{
                         text-decoration: underline;
@@ -229,12 +228,41 @@ main{
 
                 .about__text{
                     color: #838383;
-                    margin-bottom: 75px;
+                    margin: 40px 0;
                 }
             }
 
             .about__video{
                 flex: 1;
+
+                .video-js{
+                    width: 100%;
+                }
+
+                .vjs-poster{
+                    background-size: cover;
+                }
+
+                .vjs-big-play-button{
+                    background-color: rgba(255, 255, 255, .25);
+                    border: none;
+                    border-radius: 50%;
+                    height: 60px;
+                    width: 60px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .vjs-icon-placeholder{        
+
+                        &::before{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
             }
         }
     }

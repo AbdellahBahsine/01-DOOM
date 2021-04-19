@@ -17,5 +17,3 @@ $(document).ready(function(){
    
    $('#counter').html("0"+item+"/0"+items)
  } 
-
- 
