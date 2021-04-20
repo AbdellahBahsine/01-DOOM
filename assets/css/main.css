@@ -12,6 +12,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1.5;
+  color: #2e2e2e;
 }
 
 .button {
@@ -146,6 +147,7 @@ main .message .message__icon .fa-envelope {
   color: #fff;
 }
 main .hero {
+  position: relative;
   height: 1100px;
   background-color: #6270ff;
   color: #fff;
@@ -192,15 +194,20 @@ main .hero .owl-dots .owl-dot span {
   border: 2px solid #fff;
   background: none;
 }
-main .hero .owl-stage-outer {
+main .hero .owl-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main .hero .owl-carousel .owl-stage-outer {
   height: 100%;
   width: 100%;
 }
-main .hero .owl-stage-outer .owl-stage {
+main .hero .owl-carousel .owl-stage-outer .owl-stage {
   height: 100%;
   width: 100%;
 }
-main .hero .owl-stage-outer .owl-stage .owl-item {
+main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item {
   width: 100%;
   height: 100%;
   background-image: url("../images/home.jpg");
@@ -208,7 +215,7 @@ main .hero .owl-stage-outer .owl-stage .owl-item {
   background-repeat: no-repeat;
   position: relative;
 }
-main .hero .owl-stage-outer .owl-stage .owl-item::after {
+main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item::after {
   content: "";
   position: absolute;
   top: 0;
@@ -217,10 +224,10 @@ main .hero .owl-stage-outer .owl-stage .owl-item::after {
   width: 100%;
   background-color: rgba(51, 51, 51, 0.5);
 }
-main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner {
+main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner {
   position: relative;
   z-index: 3;
-  width: 95%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -228,13 +235,13 @@ main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner {
   align-items: center;
   text-align: center;
 }
-main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
+main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
   font-size: 100px;
   font-weight: 200;
   margin-bottom: 70px;
   margin-top: 360px;
 }
-main .hero .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title span {
+main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title span {
   font-weight: 700;
 }
 main .count {
@@ -324,6 +331,105 @@ main .about .about__inner .about__video .vjs-big-play-button .vjs-icon-placehold
   display: flex;
   align-items: center;
   justify-content: center;
+}
+main .why-choose-us {
+  height: 938px;
+  background-color: #6270ff;
+  padding: 100px 0;
+}
+main .why-choose-us .why-choose-us__inner {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 8%;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__tag {
+  text-transform: uppercase;
+  color: #838383;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 {
+  display: flex;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .why-choose-us__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .why-choose-us__text .why-choose-us__description {
+  color: #838383;
+  margin: 40px 0;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .why-choose-us__text .read-more {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6270ff;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 10px;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar__bar {
+  position: relative;
+  height: 5px;
+  background-color: #f7fafb;
+  margin: 14px 0;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar__bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #6270ff;
+  height: 100%;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar:nth-child(1) .progress-bar__bar::after {
+  width: 70%;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar:nth-child(2) .progress-bar__bar::after {
+  width: 100%;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar:nth-child(3) .progress-bar__bar::after {
+  width: 60%;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-1 .progress-bars .progress-bar:nth-child(4) .progress-bar__bar::after {
+  width: 90%;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 .achievment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 .achievment .achievement__image {
+  margin-bottom: 25px;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 .achievment .achievement__title {
+  font-size: 36px;
+  font-weight: 500;
+}
+main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 .achievment .achievement__text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #838383;
 }
 
 /*# sourceMappingURL=main.css.map */
