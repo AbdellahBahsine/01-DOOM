@@ -491,5 +491,51 @@ main .revolutionary-product .revolutionary-product__inner .cards .card:last-chil
   position: absolute;
   left: 0;
 }
+main .faq {
+  padding: 100px 0;
+}
+main .faq .faq__inner {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .faq .faq__inner .faq__tag {
+  text-transform: uppercase;
+  color: #838383;
+}
+main .faq .faq__inner .faq__title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2e2e2e;
+  text-align: center;
+}
+main .faq .faq__inner .faqs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 90px;
+}
+main .faq .faq__inner .faqs .faqs__accordion {
+  margin-bottom: 50px;
+}
+main .faq .faq__inner .faqs .faqs__accordion .faqs__question {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+main .faq .faq__inner .faqs .faqs__accordion .faqs__answer {
+  font-size: 15px;
+  color: #838383;
+}
+main .faq .faq__inner .button {
+  margin-top: 35px;
+}
+main .faq .faq__inner .button img {
+  vertical-align: baseline;
+  margin-left: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */

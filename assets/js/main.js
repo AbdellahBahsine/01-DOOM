@@ -17,3 +17,11 @@ $(document).ready(function(){
    
    $('#counter').html("0"+item+"/0"+items)
  } 
+
+const accordion = document.querySelectorAll("#accordion");
+
+accordion.forEach(acc => {
+  acc.addEventListener("click", function() {
+    acc.children[1].classList.toggle("active")
+  })
+})
