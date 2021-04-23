@@ -537,5 +537,26 @@ main .faq .faq__inner .button img {
   vertical-align: baseline;
   margin-left: 10px;
 }
+main .logos {
+  padding: 100px 0;
+  background-color: #6270ff;
+}
+main .logos .logos__inner {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .logos .logos__inner .logo__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+main .logos .logos__inner .logo__image:last-child {
+  margin-right: 0;
+}
 
 /*# sourceMappingURL=main.css.map */

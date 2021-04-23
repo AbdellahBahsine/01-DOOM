@@ -551,4 +551,29 @@ main{
             }
         }
     }
+
+    .logos{
+        padding: 100px 0;
+        background-color: $color-primary;
+
+        .logos__inner{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo__image{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 15px;
+            }
+
+            .logo__image:last-child{
+                margin-right: 0;
+            }
+        }
+    }
 }
