@@ -104,6 +104,120 @@ header .header__inner .phone .phone__number {
   text-transform: uppercase;
 }
 
+footer {
+  background-color: #060a35;
+}
+footer .footer__inner {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+  color: #fff;
+}
+footer .footer__inner .footer__about {
+  flex: 1;
+  margin-right: 44px;
+}
+footer .footer__inner .footer__about img {
+  margin-bottom: 40px;
+  vertical-align: top;
+}
+footer .footer__inner .footer__about .footer__about__text {
+  opacity: 30%;
+  font-size: 15px;
+}
+footer .footer__inner .footer__links {
+  flex: 1;
+  margin-right: 44px;
+}
+footer .footer__inner .footer__links .footer__links__title {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+footer .footer__inner .footer__links nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .footer__inner .footer__links nav .nav__link {
+  position: relative;
+  font-size: 15px;
+  opacity: 30%;
+  color: #fff;
+  margin-bottom: 15px;
+}
+footer .footer__inner .footer__links nav .nav__link::before, footer .footer__inner .footer__links nav .nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  border: 1px solid transparent;
+}
+footer .footer__inner .footer__links nav .nav__link::before {
+  left: 0;
+}
+footer .footer__inner .footer__links nav .nav__link::after {
+  right: 0;
+}
+footer .footer__inner .footer__links nav .nav__link:hover::before, footer .footer__inner .footer__links nav .nav__link:hover::after {
+  width: 50%;
+  border: 1px solid #6270ff;
+  transition: 0.6s;
+}
+footer .footer__inner .footer__links nav .nav__link:hover {
+  opacity: 100%;
+  transition: 0.6s;
+}
+footer .footer__inner .footer__blogs {
+  flex: 1;
+  margin-right: 44px;
+}
+footer .footer__inner .footer__blogs .footer__blogs__title {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+footer .footer__inner .footer__blogs .blog {
+  margin-bottom: 35px;
+}
+footer .footer__inner .footer__blogs .blog .blog__date {
+  opacity: 30%;
+  font-size: 13px;
+}
+footer .footer__inner .footer__blogs .blog .blog__title {
+  font-size: 14px;
+  font-weight: 700;
+}
+footer .footer__inner .footer__blogs .blog .footer__blog__author {
+  opacity: 30%;
+  font-size: 10px;
+  font-weight: 100;
+}
+footer .footer__inner .footer__blogs .blog:last-child {
+  margin-bottom: 0;
+}
+footer .footer__inner .footer__contact {
+  flex: 1;
+}
+footer .footer__inner .footer__contact .footer__contact__title {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+footer .footer__inner .footer__contact .footer_contact__address, footer .footer__inner .footer__contact .footer__contact__phone, footer .footer__inner .footer__contact .footer__contact__email {
+  font-size: 15px;
+  opacity: 30%;
+}
+footer .footer__inner .footer__contact .footer_contact__address i, footer .footer__inner .footer__contact .footer__contact__phone i, footer .footer__inner .footer__contact .footer__contact__email i {
+  margin-right: 10px;
+  color: #6270ff;
+}
+footer .footer__inner .footer__contact .footer_contact__address {
+  margin-bottom: 24px;
+}
+footer .footer__inner .footer__contact .footer__contact__phone {
+  margin-bottom: 24px;
+}
+
 main {
   position: relative;
 }

@@ -1,0 +1,139 @@
+footer{
+    background-color: #060a35;
+
+    .footer__inner{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+        color: $color-white;
+
+        .footer__about{
+            flex: 1;
+            margin-right: 44px;
+
+            img{
+                margin-bottom: 40px;
+                vertical-align: top;
+            }
+
+            .footer__about__text{
+                opacity: 30%;
+                font-size: 15px;
+            }
+        }
+
+        .footer__links{
+            flex: 1;
+            margin-right: 44px;
+
+            .footer__links__title{
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            nav{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                .nav__link{
+                    position: relative;
+                    font-size: 15px;
+                    opacity: 30%;
+                    color: $color-white;
+                    margin-bottom: 15px;
+
+                    &::before, &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        width: 0%;
+                        border: 1px solid transparent;
+                    }
+
+                    &::before{
+                        left: 0;
+                    }
+    
+                    &::after{
+                        right: 0;
+                    }
+    
+                    &:hover::before, &:hover::after{
+                        width: 50%;
+                        border: 1px solid $color-primary;
+                        transition: 0.6s;
+                    }
+
+                    &:hover{
+                        opacity: 100%;
+                        transition: 0.6s;
+                    }
+                }
+            }
+        }
+
+        .footer__blogs{
+            flex: 1;
+            margin-right: 44px;
+
+            .footer__blogs__title{
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            .blog{
+                margin-bottom: 35px;
+
+                .blog__date{
+                    opacity: 30%;
+                    font-size: 13px;
+                }
+
+                .blog__title{
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                .footer__blog__author{
+                    opacity: 30%;
+                    font-size: 10px;
+                    font-weight: 100;
+                }
+            }
+
+            .blog:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        .footer__contact{
+            flex: 1;
+
+            .footer__contact__title{
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            .footer_contact__address, .footer__contact__phone, .footer__contact__email{
+                font-size: 15px;
+                opacity: 30%;
+
+                i{
+                    margin-right: 10px;
+                    color: $color-primary;
+                }
+            }
+
+            .footer_contact__address{
+                margin-bottom: 24px;
+            }
+
+            .footer__contact__phone{
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
