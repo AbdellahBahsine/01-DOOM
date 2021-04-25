@@ -95,6 +95,12 @@ footer{
                 .blog__title{
                     font-size: 14px;
                     font-weight: 700;
+                    opacity: 30%;
+
+                    &:hover{
+                        opacity: 100%;
+                        transition: 0.6s;
+                    }
                 }
 
                 .footer__blog__author{
@@ -133,6 +139,51 @@ footer{
 
             .footer__contact__phone{
                 margin-bottom: 24px;
+            }
+        }
+    }
+
+    .footer-ending{
+        background-color: #05082b;
+
+        .footer-ending__inner{
+            padding: 25px 0;
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+
+            img{
+                width: 40px;
+                opacity: 30%;
+            }
+
+            .footer-ending__credit{
+                margin-right: auto;
+                margin-left: 24px;
+                font-size: 13px;
+                opacity: 30%;
+            }
+
+            .socials{
+                display: flex;
+
+                .fab{
+                    margin-right: 26px;
+                    cursor: pointer;   
+                    opacity: 30%;  
+                    
+                    &:hover{
+                        opacity: 100%;
+                        transition: 0.6s;
+                    }
+                }
+    
+                i:last-child{
+                    margin-right: 0;
+                }
             }
         }
     }

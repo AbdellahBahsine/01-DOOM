@@ -187,6 +187,11 @@ footer .footer__inner .footer__blogs .blog .blog__date {
 footer .footer__inner .footer__blogs .blog .blog__title {
   font-size: 14px;
   font-weight: 700;
+  opacity: 30%;
+}
+footer .footer__inner .footer__blogs .blog .blog__title:hover {
+  opacity: 100%;
+  transition: 0.6s;
 }
 footer .footer__inner .footer__blogs .blog .footer__blog__author {
   opacity: 30%;
@@ -216,6 +221,43 @@ footer .footer__inner .footer__contact .footer_contact__address {
 }
 footer .footer__inner .footer__contact .footer__contact__phone {
   margin-bottom: 24px;
+}
+footer .footer-ending {
+  background-color: #05082b;
+}
+footer .footer-ending .footer-ending__inner {
+  padding: 25px 0;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+footer .footer-ending .footer-ending__inner img {
+  width: 40px;
+  opacity: 30%;
+}
+footer .footer-ending .footer-ending__inner .footer-ending__credit {
+  margin-right: auto;
+  margin-left: 24px;
+  font-size: 13px;
+  opacity: 30%;
+}
+footer .footer-ending .footer-ending__inner .socials {
+  display: flex;
+}
+footer .footer-ending .footer-ending__inner .socials .fab {
+  margin-right: 26px;
+  cursor: pointer;
+  opacity: 30%;
+}
+footer .footer-ending .footer-ending__inner .socials .fab:hover {
+  opacity: 100%;
+  transition: 0.6s;
+}
+footer .footer-ending .footer-ending__inner .socials i:last-child {
+  margin-right: 0;
 }
 
 main {
