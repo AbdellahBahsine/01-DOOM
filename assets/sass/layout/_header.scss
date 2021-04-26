@@ -9,10 +9,25 @@ header{
         justify-content: space-between;
         align-items: center;
 
+        .bars{
+            font-size: 34px;
+            color: $color-primary;
+            margin-right: 2.5%;
+            display: none;
+
+            @media screen and (max-width: 923px){
+                display: block;
+            }
+        }
+
         nav{
             margin-left: auto;
             height: 80px;
             display: flex;
+
+            @media screen and (max-width: 923px){
+                display: none;
+            }
 
             .nav__link{
                 position: relative;
@@ -51,6 +66,10 @@ header{
             height: 100%;
             margin-left: 28px;
 
+            @media screen and (max-width: 1120px){
+                display: none;
+            }
+
             .phone__icon{
                 padding: 0 28px;
                 background-color: $color-primary;
@@ -74,6 +93,11 @@ header{
                 font-weight: 700;
                 font-size: 18px;
                 text-transform: uppercase;
+
+                @media screen and (max-width: 1366px){
+                    font-size: 16px;
+                    padding: 0 18px;
+                }
             }
         }
     }

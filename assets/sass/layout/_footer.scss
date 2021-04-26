@@ -4,14 +4,17 @@ footer{
     .footer__inner{
         width: 70%;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         padding: 100px 0;
         color: $color-white;
 
+        @media screen and (max-width: 923px){
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+        }
+
         .footer__about{
-            flex: 1;
-            margin-right: 44px;
 
             img{
                 margin-bottom: 40px;
@@ -25,8 +28,6 @@ footer{
         }
 
         .footer__links{
-            flex: 1;
-            margin-right: 44px;
 
             .footer__links__title{
                 font-size: 18px;
@@ -76,8 +77,6 @@ footer{
         }
 
         .footer__blogs{
-            flex: 1;
-            margin-right: 44px;
 
             .footer__blogs__title{
                 font-size: 18px;
@@ -116,7 +115,6 @@ footer{
         }
 
         .footer__contact{
-            flex: 1;
 
             .footer__contact__title{
                 font-size: 18px;

@@ -52,6 +52,10 @@ main{
         background-color: $color-primary;
         color: $color-white;
 
+        @media screen and (max-width: 1366px){
+            height: 800px;
+        }
+
         button:focus { 
             outline: 0
         }
@@ -152,6 +156,16 @@ main{
                                 font-weight: 200;
                                 margin-bottom: 70px;
                                 margin-top: 360px;
+
+                                @media screen and (max-width: 1366px){
+                                    font-size: 70px;
+                                    margin-top: 230px;
+                                    margin-bottom: 30px;
+                                }
+
+                                @media screen and (max-width: 923px){
+                                    font-size: 55px;
+                                }
                 
                                 span{
                                     font-weight: 700;
@@ -181,6 +195,10 @@ main{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 15px; 
+
+            @media screen and (max-width: 1100px){
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             .feature{
                 margin-bottom: 25px;
@@ -216,6 +234,14 @@ main{
 
             .about__content{
                 flex: 1;
+                margin-right: 15px;
+
+                @media screen and (max-width: 975px){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
 
                 .about__tag{
                     text-transform: uppercase;
@@ -227,6 +253,10 @@ main{
                     font-weight: 700;
                     color: $color-dark;
 
+                    @media screen and (max-width: 1100px){
+                        font-size: 28px;
+                    }
+
                     span{
                         text-decoration: underline;
                         text-decoration-color: $color-primary;
@@ -236,14 +266,28 @@ main{
                 .about__text{
                     color: #838383;
                     margin: 40px 0;
+
+                    @media screen and (max-width: 1100px){
+                        font-size: 14px;
+                        margin: 30px 0;
+                    }
                 }
             }
 
             .about__video{
                 flex: 1;
+                margin-left: 15px;
+
+                @media screen and (max-width: 975px){
+                    display: none;
+                }
 
                 .video-js{
                     width: 100%;
+
+                    @media screen and (max-width: 1366px){
+                        height: 300px;
+                    }
                 }
 
                 .vjs-poster{
@@ -295,6 +339,10 @@ main{
                 font-size: 34px;
                 font-weight: 700;
                 color: $color-dark;
+
+                @media screen and (max-width: 1100px){
+                    font-size: 28px;
+                }
             }
 
             .why-choose-us__row-1{
@@ -305,6 +353,10 @@ main{
                     flex-direction: column;
                     flex: 1;
                     margin-right: 10px;
+
+                    @media screen and (max-width: 1100px){
+                        font-size: 14px;
+                    }
 
                     .why-choose-us__description{
                         color: #838383;
@@ -323,6 +375,10 @@ main{
                     flex-direction: column;
                     flex: 1;
                     margin-left: 10px;
+
+                    @media screen and (max-width: 846px){
+                        display: none;
+                    }
 
                     .progress-bar__text{
                         display: flex;
@@ -389,9 +445,8 @@ main{
             }
 
             .why-choose-us__row-2{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
                 margin-top: 90px;
 
                 .achievment{
@@ -406,12 +461,20 @@ main{
                     .achievement__title{
                         font-size: 36px;
                         font-weight: 500;
+
+                        @media screen and (max-width: 1100px){
+                            font-size: 28px;
+                        }
                     }
 
                     .achievement__text{
                         font-size: 18px;
                         font-weight: 500;
                         color: #838383;
+
+                        @media screen and (max-width: 1100px){
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -439,6 +502,10 @@ main{
                 font-weight: 700;
                 color: $color-dark;
                 text-align: center;
+
+                @media screen and (max-width: 1100px){
+                    font-size: 28px;
+                }
             }
 
             .cards{
@@ -447,6 +514,10 @@ main{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 30px;
+
+                @media screen and (max-width: 1100px){
+                    grid-template-columns: repeat(2, 1fr);
+                }
 
                 .card{
                     background-color: #fff;
@@ -516,6 +587,10 @@ main{
                 font-weight: 700;
                 color: $color-dark;
                 text-align: center;
+
+                @media screen and (max-width: 1100px){
+                    font-size: 28px;
+                }
             }
 
             .faqs{
@@ -537,6 +612,10 @@ main{
                     .faqs__answer{
                         font-size: 15px;
                         color: #838383;
+
+                        @media screen and (max-width: 1100px){
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -553,26 +632,23 @@ main{
     }
 
     .logos{
-        padding: 100px 0;
+        padding: 75px 0;
         background-color: $color-primary;
 
         .logos__inner{
             width: 70%;
             margin: 0 auto;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
 
             .logo__image{
                 flex: 1;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-right: 15px;
-            }
-
-            .logo__image:last-child{
-                margin-right: 0;
+                margin: 15px;
             }
         }
     }

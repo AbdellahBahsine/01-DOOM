@@ -12,6 +12,11 @@
     color: $color-white;
     cursor: pointer;
 
+    @media screen and (max-width: 1366px){
+        width: 230px;
+        height: 60px;
+    }
+
     .fa-location-arrow{
         font-size: 15px;
         margin-left: 10px;
