@@ -56,6 +56,10 @@ main{
             height: 800px;
         }
 
+        @media screen and (max-width: 770px){
+            height: 600px;
+        }
+
         button:focus { 
             outline: 0
         }
@@ -166,6 +170,11 @@ main{
                                 @media screen and (max-width: 923px){
                                     font-size: 55px;
                                 }
+
+                                @media screen and (max-width: 770px){
+                                    font-size: 45px;
+                                    margin-top: 170px;
+                                }
                 
                                 span{
                                     font-weight: 700;
@@ -233,7 +242,7 @@ main{
             align-items: center;
 
             .about__content{
-                flex: 1;
+                width: 50%;
                 margin-right: 15px;
 
                 @media screen and (max-width: 975px){
@@ -241,7 +250,8 @@ main{
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
-                }
+                    width: 100%;
+                } 
 
                 .about__tag{
                     text-transform: uppercase;
@@ -275,7 +285,7 @@ main{
             }
 
             .about__video{
-                flex: 1;
+                width: 50%;
                 margin-left: 15px;
 
                 @media screen and (max-width: 975px){
@@ -319,7 +329,6 @@ main{
     }
 
     .why-choose-us{
-        height: 938px;
         background-color: $color-primary;
         padding: 100px 0;
 
@@ -449,12 +458,19 @@ main{
                 grid-template-columns: repeat(4, 1fr);
                 margin-top: 90px;
 
+                @media screen and (max-width: 790px){
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 20px;
+                }
+
                 .achievment{
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     align-items: center;
+                    text-align: center;
 
-                    .achievement__image{
+                    .achievement__image{                    
                         margin-bottom: 25px;
                     }
 
@@ -517,6 +533,10 @@ main{
 
                 @media screen and (max-width: 1100px){
                     grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media screen and (max-width: 770px){
+                    grid-template-columns: repeat(1, 1fr);
                 }
 
                 .card{

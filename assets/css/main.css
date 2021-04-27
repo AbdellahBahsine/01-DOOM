@@ -35,9 +35,21 @@ body {
     height: 60px;
   }
 }
+@media screen and (max-width: 770px) {
+  .button {
+    width: 190px;
+    height: 50px;
+    font-size: 12px;
+  }
+}
 .button .fa-location-arrow {
   font-size: 15px;
   margin-left: 10px;
+}
+@media screen and (max-width: 770px) {
+  .button .fa-location-arrow {
+    font-size: 12px;
+  }
 }
 
 header {
@@ -154,6 +166,12 @@ footer .footer__inner {
     grid-gap: 15px;
   }
 }
+@media screen and (max-width: 646px) {
+  footer .footer__inner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+  }
+}
 footer .footer__inner .footer__about img {
   margin-bottom: 40px;
   vertical-align: top;
@@ -258,13 +276,27 @@ footer .footer-ending .footer-ending__inner {
   justify-content: space-between;
   color: #fff;
 }
-footer .footer-ending .footer-ending__inner img {
+@media screen and (max-width: 646px) {
+  footer .footer-ending .footer-ending__inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+footer .footer-ending .footer-ending__inner .footer-ending__credit__container {
+  display: flex;
+}
+@media screen and (max-width: 646px) {
+  footer .footer-ending .footer-ending__inner .footer-ending__credit__container {
+    order: 2;
+    margin-top: 15px;
+  }
+}
+footer .footer-ending .footer-ending__inner .footer-ending__credit__container img {
   width: 40px;
   opacity: 30%;
 }
-footer .footer-ending .footer-ending__inner .footer-ending__credit {
-  margin-right: auto;
-  margin-left: 24px;
+footer .footer-ending .footer-ending__inner .footer-ending__credit__container .footer-ending__credit {
+  margin-left: 20px;
   font-size: 13px;
   opacity: 30%;
 }
@@ -335,6 +367,11 @@ main .hero {
 @media screen and (max-width: 1366px) {
   main .hero {
     height: 800px;
+  }
+}
+@media screen and (max-width: 770px) {
+  main .hero {
+    height: 600px;
   }
 }
 main .hero button:focus {
@@ -438,6 +475,12 @@ main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .her
     font-size: 55px;
   }
 }
+@media screen and (max-width: 770px) {
+  main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
+    font-size: 45px;
+    margin-top: 170px;
+  }
+}
 main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title span {
   font-weight: 700;
 }
@@ -490,7 +533,7 @@ main .about .about__inner {
   align-items: center;
 }
 main .about .about__inner .about__content {
-  flex: 1;
+  width: 50%;
   margin-right: 15px;
 }
 @media screen and (max-width: 975px) {
@@ -499,6 +542,7 @@ main .about .about__inner .about__content {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 }
 main .about .about__inner .about__content .about__tag {
@@ -530,7 +574,7 @@ main .about .about__inner .about__content .about__text {
   }
 }
 main .about .about__inner .about__video {
-  flex: 1;
+  width: 50%;
   margin-left: 15px;
 }
 @media screen and (max-width: 975px) {
@@ -566,7 +610,6 @@ main .about .about__inner .about__video .vjs-big-play-button .vjs-icon-placehold
   justify-content: center;
 }
 main .why-choose-us {
-  height: 938px;
   background-color: #6270ff;
   padding: 100px 0;
 }
@@ -661,10 +704,18 @@ main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 90px;
 }
+@media screen and (max-width: 790px) {
+  main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
 main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 .achievment {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 main .why-choose-us .why-choose-us__inner .why-choose-us__row-2 .achievment .achievement__image {
   margin-bottom: 25px;
@@ -724,6 +775,11 @@ main .revolutionary-product .revolutionary-product__inner .cards {
 @media screen and (max-width: 1100px) {
   main .revolutionary-product .revolutionary-product__inner .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 770px) {
+  main .revolutionary-product .revolutionary-product__inner .cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 main .revolutionary-product .revolutionary-product__inner .cards .card {

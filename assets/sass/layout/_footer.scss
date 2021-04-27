@@ -14,6 +14,11 @@ footer{
             grid-gap: 15px;
         }
 
+        @media screen and (max-width: 646px){
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 25px;
+        }
+
         .footer__about{
 
             img{
@@ -153,16 +158,29 @@ footer{
             justify-content: space-between;
             color: #fff;
 
-            img{
-                width: 40px;
-                opacity: 30%;
+            @media screen and (max-width: 646px){
+                flex-direction: column;
+                justify-content: center;
             }
 
-            .footer-ending__credit{
-                margin-right: auto;
-                margin-left: 24px;
-                font-size: 13px;
-                opacity: 30%;
+            .footer-ending__credit__container{
+                display: flex;
+
+                @media screen and (max-width: 646px){
+                    order: 2;
+                    margin-top: 15px;
+                }
+
+                img{
+                    width: 40px;
+                    opacity: 30%;
+                }
+    
+                .footer-ending__credit{
+                    margin-left: 20px;
+                    font-size: 13px;
+                    opacity: 30%;
+                }
             }
 
             .socials{
