@@ -25,3 +25,8 @@ accordion.forEach(acc => {
     acc.children[1].classList.toggle("active")
   })
 })
+
+const bars = document.getElementById('bars');
+const mobileMenu = document.getElementById('mobile-menu');
+
+bars.addEventListener('click', () => mobileMenu.classList.toggle('active'))

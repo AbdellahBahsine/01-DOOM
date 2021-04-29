@@ -53,8 +53,11 @@ body {
 }
 
 header {
+  position: relative;
+  z-index: 2;
   height: 80px;
   color: #2e2e2e;
+  background-color: #fff;
 }
 header .header__inner {
   height: 100%;
@@ -67,6 +70,7 @@ header .header__inner .bars {
   font-size: 34px;
   color: #6270ff;
   margin-right: 2.5%;
+  cursor: pointer;
   display: none;
 }
 @media screen and (max-width: 923px) {
@@ -92,6 +96,15 @@ header .header__inner nav .nav__link {
   line-height: 80px;
   color: #2e2e2e;
 }
+@media screen and (max-width: 923px) {
+  header .header__inner nav .nav__link {
+    height: auto;
+    line-height: 60px;
+    font-size: 22px;
+    color: #fff;
+    opacity: 0.9;
+  }
+}
 header .header__inner nav .nav__link::before, header .header__inner nav .nav__link::after {
   content: "";
   position: absolute;
@@ -107,8 +120,13 @@ header .header__inner nav .nav__link::after {
   right: 0;
 }
 header .header__inner nav .nav__link:hover::before, header .header__inner nav .nav__link:hover::after {
-  width: 50%;
+  width: 51%;
   border: 1px solid #6270ff;
+}
+@media screen and (max-width: 923px) {
+  header .header__inner nav .nav__link:hover::before, header .header__inner nav .nav__link:hover::after {
+    border: 1px solid #2e2e2e;
+  }
 }
 header .header__inner .phone {
   display: flex;
@@ -316,8 +334,72 @@ footer .footer-ending .footer-ending__inner .socials i:last-child {
   margin-right: 0;
 }
 
+.mobile-menu {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background: #6270ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  padding-top: 50px;
+}
+.mobile-menu.active {
+  opacity: 1;
+  top: 0;
+  transition: top 0.6s;
+}
+.mobile-menu .nav__link {
+  position: relative;
+  margin: 0 28px;
+  height: 100%;
+  font-weight: 500;
+  line-height: 80px;
+  color: #2e2e2e;
+}
+@media screen and (max-width: 923px) {
+  .mobile-menu .nav__link {
+    height: auto;
+    line-height: 60px;
+    font-size: 22px;
+    color: #fff;
+    opacity: 0.9;
+  }
+}
+.mobile-menu .nav__link::before, .mobile-menu .nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  border: 1px solid transparent;
+  transition: width 0.2s;
+}
+.mobile-menu .nav__link::before {
+  left: 0;
+}
+.mobile-menu .nav__link::after {
+  right: 0;
+}
+.mobile-menu .nav__link:hover::before, .mobile-menu .nav__link:hover::after {
+  width: 51%;
+  border: 1px solid #6270ff;
+}
+@media screen and (max-width: 923px) {
+  .mobile-menu .nav__link:hover::before, .mobile-menu .nav__link:hover::after {
+    border: 1px solid #2e2e2e;
+  }
+}
+
 main {
   position: relative;
+  z-index: -3;
 }
 main .message {
   position: fixed;
@@ -437,18 +519,8 @@ main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item {
   background-repeat: no-repeat;
   position: relative;
 }
-main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(51, 51, 51, 0.5);
-}
 main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner {
   position: relative;
-  z-index: 3;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -456,6 +528,16 @@ main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+  background-color: rgba(51, 51, 51, 0.5);
 }
 main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
   font-size: 100px;
@@ -466,7 +548,7 @@ main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .her
 @media screen and (max-width: 1366px) {
   main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
     font-size: 70px;
-    margin-top: 230px;
+    margin-top: 200px;
     margin-bottom: 30px;
   }
 }
@@ -478,7 +560,13 @@ main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .her
 @media screen and (max-width: 770px) {
   main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
     font-size: 45px;
-    margin-top: 170px;
+    margin-top: 160px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title {
+    font-size: 40px;
+    margin-top: 10px;
   }
 }
 main .hero .owl-carousel .owl-stage-outer .owl-stage .owl-item .hero__inner .hero__title span {

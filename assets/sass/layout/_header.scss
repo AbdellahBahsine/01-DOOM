@@ -1,6 +1,9 @@
 header{
+    position: relative;
+    z-index: 2;
     height: 80px;
     color: $color-dark;
+    background-color: $color-white;
 
     .header__inner{
         height: 100%;
@@ -13,6 +16,7 @@ header{
             font-size: 34px;
             color: $color-primary;
             margin-right: 2.5%;
+            cursor: pointer;
             display: none;
 
             @media screen and (max-width: 923px){
@@ -25,7 +29,7 @@ header{
             height: 80px;
             display: flex;
 
-            @media screen and (max-width: 923px){
+            @media screen and (max-width: 923px){  
                 display: none;
             }
 
@@ -36,6 +40,14 @@ header{
                 font-weight: 500;
                 line-height: 80px;
                 color: $color-dark;
+
+                @media screen and (max-width: 923px){
+                    height: auto;
+                    line-height: 60px;
+                    font-size: 22px;
+                    color: $color-white;
+                    opacity: .9;
+                }
 
                 &::before, &::after{
                     content: '';
@@ -55,8 +67,12 @@ header{
                 }
 
                 &:hover::before, &:hover::after{
-                    width: 50%;
+                    width: 51%;
                     border: 1px solid $color-primary;
+
+                    @media screen and (max-width: 923px){
+                        border: 1px solid $color-dark;
+                    }
                 }
             }
         }
