@@ -54,7 +54,7 @@ body {
 
 header {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   height: 80px;
   color: #2e2e2e;
   background-color: #fff;
@@ -340,7 +340,7 @@ footer .footer-ending .footer-ending__inner .socials i:last-child {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   background: #6270ff;
   display: flex;
@@ -399,7 +399,6 @@ footer .footer-ending .footer-ending__inner .socials i:last-child {
 
 main {
   position: relative;
-  z-index: -3;
 }
 main .message {
   position: fixed;
